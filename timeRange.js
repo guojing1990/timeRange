@@ -2,6 +2,7 @@
  * 时间段选择功能区
  * author gj
  */
+createTimes(0,1);
 var endTimeStart = 0;
 function createTimes(startTime,index){
 	var timeOpts = '<option value="">时间区间</option>';
@@ -54,7 +55,7 @@ function getNextTimes(index){
 }
 //添加时间段
 function addTimeRange(index){
-	var timeRangeHtml = '<div class="col-sm-7 col-sm-offset-5 TimeRange addTimeRange">'+
+	var timeRangeHtml = '<div class="col-sm-7 col-sm-offset-2 TimeRange addTimeRange">'+
 								'<select name="strartTimes" onchange="getEndTimes('+index+')" class="col-sm-3 time startTime'+index+'"  style="height:27px;" data-placeholder="时间区间">'+
 									'<option value="">时间区间</option>'+
 								'</select>'+
