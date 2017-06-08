@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>timeRane</title>
+    <link href="bootstrap.min.css" rel="stylesheet" type="text/css">
+    <style type="text/css">
+    .linkText{
+      text-align:center;
+      line-height:27px;
+    }
+    .addOrRemove{
+      line-height:27px;
+    }
+    .addOrRemove a{
+      padding:0 5px;
+    }
+    .addOrRemove a.add{
+      display:none;
+    }
+    .addTimeRange{
+      margin-top:15px;
+    }
+    </style>
+</head>
+<body>
+<div class="form-group">
+    <label class="col-sm-5 control-label"
+    >时间区间设置:</label>
+    <div class="col-sm-7 TimeRange">
+        <select name="strartTimes" onchange="getEndTimes(1)" class="col-sm-3 time startTime1"
+                data-placeholder="时间区间">
+            <option value="">时间区间</option>
+        </select>
+        <span class="col-sm-2 linkText">至</span>
+        <select name="endTimes" onchange="getNextTimes(1)" class="col-sm-3 time endTime1"
+                data-placeholder="时间区间">
+            <option value="">时间区间</option>
+        </select>
+        <div class="col-sm-4 addOrRemove">
+            <a onclick="addTimeRange(2)" class="add"><img src="add.png"></a>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="jquery-2.1.4.min.js"></script>
+<script type="text/javascript" src="timeRange.js"></script>
+</body>
+</html>
